@@ -1,0 +1,57 @@
+// Navbar.js
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faBars } from '@fortawesome/free-solid-svg-icons';
+import './Navbar.css';
+
+function Navbar() {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  return (
+    <nav className="navbar">
+      <div className="container">
+        {/* Left side with Logo, Categories dropdown, and Search */}
+        <div className="navbar-left">
+          <div className="navbar-logo">Logo</div>
+          <div className="navbar-categories">
+            <button className="dropdown-btn">Categories</button>
+            {/* Dropdown options */}
+            <div className="dropdown-content">
+              <a href="#">Category 1</a>
+              <a href="#">Category 2</a>
+              <a href="#">Category 3</a>
+            </div>
+          </div>
+          {/* <button className="navbar-search">
+            <FontAwesomeIcon icon={faSearch} />
+          </button> */}
+
+        <div className="search-bar">
+            <input type="text" className="search-input" placeholder="What do you want to learn?" />
+            <button className="search-button"><FontAwesomeIcon icon={faSearch} />
+            </button>
+        </div> 
+        </div>
+
+        {/* Right side with Courses, Events, Login, Logout */}
+        <div className={`navbar-right ${isMobileMenuOpen ? 'open' : ''}`}>
+          <a href="#">Courses</a>
+          <a href="#">Events</a>
+          <a href="#">Login</a>
+          <a href="#">Logout</a>
+        </div>
+
+        {/* Toggle button for mobile view */}
+        <button className="navbar-toggle" onClick={toggleMobileMenu}>
+          <FontAwesomeIcon icon={faBars} />
+        </button>
+      </div>
+    </nav>
+  );
+}
+
+export default Navbar;
