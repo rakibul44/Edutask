@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faBars } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
+import Deltadev from '../images/Deltadev.png'; // Adjust path to your logo image
 
 function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,7 +17,9 @@ function Navbar() {
       <div className="container">
         {/* Left side with Logo, Categories dropdown, and Search */}
         <div className="navbar-left">
-          <div className="navbar-logo">Logo</div>
+          <div className="navbar-logo">
+            <img src={Deltadev} alt="Logo" className="logo-image" /> {/* Replace text logo with image */}
+          </div>
           <div className="navbar-categories">
             <button className="dropdown-btn">Categories</button>
             {/* Dropdown options */}
@@ -26,15 +29,11 @@ function Navbar() {
               <a href="#">Category 3</a>
             </div>
           </div>
-          {/* <button className="navbar-search">
-            <FontAwesomeIcon icon={faSearch} />
-          </button> */}
 
-        <div className="search-bar">
+          <div className="search-bar">
             <input type="text" className="search-input" placeholder="What do you want to learn?" />
-            <button className="search-button"><FontAwesomeIcon icon={faSearch} />
-            </button>
-        </div> 
+            <button className="search-button"><FontAwesomeIcon icon={faSearch} /></button>
+          </div>
         </div>
 
         {/* Right side with Courses, Events, Login, Logout */}
