@@ -1,21 +1,29 @@
 // LogoCarousel.js
 import React, { useEffect, useState } from 'react';
 import './Slider.css';
+import logo1 from '../images/logo1.png';
+import logo2 from '../images/logo2.png';
+import logo3 from '../images/logo3.png';
+import logo4 from '../images/logo4.png';
+import logo5 from '../images/logo5.png';
+import logo6 from '../images/logo6.png';
+import logo7 from '../images/logo7.png';
+import logo8 from '../images/logo8.png';
 
 const logos = [
-    { src: 'logo1.png', alt: 'Logo 1' },
-    { src: 'logo2.png', alt: 'Logo 2' },
-    { src: 'logo3.png', alt: 'Logo 3' },
-    { src: 'logo4.png', alt: 'Logo 4' },
-    { src: 'logo5.png', alt: 'Logo 5' },
-    { src: 'logo6.png', alt: 'Logo 6' },
-    { src: 'logo7.png', alt: 'Logo 7' },
-    { src: 'logo8.png', alt: 'Logo 8' },
+    { src: logo1, alt: 'Logo 1' },
+    { src: logo2, alt: 'Logo 2' },
+    { src: logo3, alt: 'Logo 3' },
+    { src: logo4, alt: 'Logo 4' },
+    { src: logo5, alt: 'Logo 5' },
+    { src: logo6, alt: 'Logo 6' },
+    { src: logo7, alt: 'Logo 7' },
+    { src: logo8, alt: 'Logo 8' },
 ];
 
 const LogoCarousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const visibleLogos = 4; // Number of logos visible at a time
+    const visibleLogos = 6; // Show 6 logos at a time
 
     useEffect(() => {
         const interval = setInterval(() => {

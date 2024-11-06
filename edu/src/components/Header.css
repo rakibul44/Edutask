@@ -1,11 +1,15 @@
 /* Center the container and set maximum width */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
 .container {
+    font-family: 'Poppins', sans-serif;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px; /* Add padding for mobile spacing */
 }
 
 .header-container {
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,7 +45,7 @@
 }
 
 .view-more-button:hover {
-    background-color: #0056b3;
+    background-color: #5081F9;
 }
 
 /* Header.css */
