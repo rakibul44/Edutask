@@ -6,6 +6,10 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Slider from './components/Slider';
 import Card from './components/Crad';
+import CourseCard from './components/CourseCard';
+import Eventlist from './components/Eventlist';
+import Newsletter from './components/Newsletter';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -19,7 +23,21 @@ function App() {
       <Slider />
       {/* Other components go here */}
 
-      <Card />    
+      <Card /> 
+      {/* card components go here */}
+
+      <CourseCard />
+      {/* card components go here */}
+
+      <Eventlist />
+      {/* News and event components go here */}
+
+      <Newsletter />
+      {/* News update components go here */}
+
+      <Footer />
+      {/* footer components go here */}
+
     </div>
   );
 }

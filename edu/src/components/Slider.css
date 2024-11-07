@@ -14,18 +14,20 @@
 .carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: fit-content;
 }
 
 .carousel-slide {
     min-width: 25%; /* Each slide takes up 25% of the track width, showing 4 logos at a time */
     display: flex;
+    min-width: calc(100% / 5);
     justify-content: center;
     align-items: center;
 }
 
 .carousel-logo { 
-    max-width: 150px;
-    max-height: 80px;
+    max-width: 100px;
+    max-height: 50px;
     opacity: 0.7;
     transition: opacity 0.3s;
 }

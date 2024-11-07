@@ -1,0 +1,225 @@
+.course-card-container {
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.section-title .highlight {
+    color: #5081F9;
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Default card styling */
+.course-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Image container styling */
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.course-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Overlay on image hover */
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.course-card:hover .image-overlay {
+    opacity: 1;
+}
+
+/* Eye icon on overlay */
+.eye-icon {
+    color: #fff;
+    font-size: 18px;
+    border: 2px solid #5081F9;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.eye-icon:hover{
+    color: #5081F9;
+    transition: 0.3s ease-in;
+}
+
+/* Ribbon */
+.ribbon {
+    background-color: #5081F9;
+    color: white;
+    width: 100%;
+    height: 20px;
+    position: relative;
+    top: -20px;
+    text-align: right;
+}
+
+.ribbon-icon {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    font-size: 30px;
+    background-color: white;
+    color: #5081F9;
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+
+.course-content {
+    padding: 15px;
+    text-align: left;
+}
+
+.course-subtitle {
+    font-size: 12px;
+    color: gray;
+}
+
+.course-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+}
+
+.course-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.course-rating {
+    color: #ffc107;
+    font-size: 14px;
+}
+
+.course-price {
+    background-color: #e0f7fa;
+    color: #00796b;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.course-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: gray;
+    border-top: 1px solid #989696c1;
+    padding: 5px 0px;
+}
+
+.course-info span {
+    display: flex;
+    align-items: center;
+}
+
+/* Responsive Design */
+/* Small mobile screens */
+@media (max-width: 575.98px) {
+    .course-card-container {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .course-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .course-title {
+        font-size: 14px;
+    }
+}
+
+/* Tablets and larger mobile screens */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .course-card-container {
+        padding: 30px;
+    }
+
+    .course-card {
+        width: 100%;
+        max-width: calc(50% - 20px);
+    }
+}
+
+/* Small laptops and larger tablets */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .course-card-container {
+        padding: 40px;
+    }
+
+    .course-card {
+        max-width: calc(50% - 20px); /* 2 cards per row */
+    }
+}
+
+/* Larger screens */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .course-card-container {
+        padding: 60px;
+    }
+
+    .course-card {
+        max-width: calc(33.33% - 20px); /* 3 cards per row */
+    }
+}
+
+/* Desktop and large screens */
+@media (min-width: 1200px) {
+    .course-card-container {
+        padding: 80px 180px;
+    }
+
+    .course-card {
+        max-width: calc(25% - 20px); /* 4 cards per row */
+    }
+}
