@@ -2,7 +2,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Slider from './components/Slider';
 import Card from './components/Crad';
@@ -11,10 +11,10 @@ import Eventlist from './components/Eventlist';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
 
-function App() {
+function Home() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       {/* Other components go here */}
 
       <Header />
@@ -42,4 +42,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

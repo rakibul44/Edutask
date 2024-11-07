@@ -1,7 +1,7 @@
 /* Basic styling for the card section */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
-.card-section{
+.card-section {
     font-family: 'Poppins', sans-serif;
     background-color: #e9e8e8;
     padding-top: 30px;
@@ -13,39 +13,38 @@
     max-width: 1200px;
     margin: auto;
     text-align: center;
-  }
-  
-  .section-title {
+}
+
+.section-title {
     font-size: 24px;
     padding-bottom: 20px;
     margin-bottom: 20px;
-  }
-  
-  .card-container {
+}
+
+.card-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
-  }
-  
-  /* Card styling */
-  .card {
-    width:30%;
+}
+
+/* Card styling */
+.card {
+    width: 30%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
     cursor: pointer;
     background-color: #f9f9f9;
-    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
     text-align: center;
     transition: transform 0.2s;
-  }
-  
-  .card:hover {
+}
+
+.card:hover {
     transform: translateY(-5px);
-  }
-  
-  /* Circular logo style */
+}
+
+/* Circular logo style */
 .card-logo img {
     background-color: #EAF5F2;
     padding: 5px;
@@ -53,43 +52,89 @@
     height: 50px;
     margin-right: 15px;
     border-radius: 50%;
-  }
+}
 
-.card-logo img:hover{
+.card-logo img:hover {
     border: 1px solid #000;
-}  
-  
-  /* Title style */
-  .card-title {
+}
+
+/* Title style */
+.card-title {
     margin-top: 10px;
     font-size: 18px;
-  }
+}
 
-  .card-title:hover{
+.card-title:hover {
     color: #5081F9;
-  }
+}
 
-  .view-more-button{
+.view-more-button {
     background-color: transparent;
-    color:#5081F9;
+    color: #5081F9;
     border: 1px solid #5081F9;
-  }
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s;
+}
 
-  .view-more-button:hover{
+.view-more-button:hover {
     color: #f9f9f9;
+    background-color: #5081F9;
+}
 
-  }
-  
-  /* Responsive design for mobile and tablet */
-  @media (max-width: 768px) {
+/* Responsive design for mobile, tablet, and desktop */
+/* Tablet version (max-width: 1024px) */
+@media (max-width: 1024px) {
     .card {
-      width: 45%;
+        width: 45%;
     }
-  }
-  
-  @media (max-width: 480px) {
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+}
+
+/* Mobile version (max-width: 768px) */
+@media (max-width: 768px) {
     .card {
-      width: 100%;
+        width: 100%;
     }
-  }
-  
+
+    .card-container {
+        gap: 15px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .card-title {
+        font-size: 15px;
+    }
+}
+
+/* Extra-small screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .card-section-container {
+        padding: 15px;
+    }
+
+    .section-title {
+        font-size: 18px;
+        padding-bottom: 15px;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+
+    .view-more-button {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
