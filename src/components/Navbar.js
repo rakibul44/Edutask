@@ -1,18 +1,20 @@
-// Navbar.js
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faBars } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
-import Deltadev from '../images/Deltadev.png'; // Adjust path to your logo image
+import Deltadev from '../images/Deltadev.png';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-
-
 
 function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isCategoriesOpen, setCategoriesOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const toggleCategories = () => {
+    setCategoriesOpen(!isCategoriesOpen);
   };
 
   return (
@@ -21,19 +23,23 @@ function Navbar() {
         {/* Left side with Logo, Categories dropdown, and Search */}
         <div className="navbar-left">
           <div className="navbar-logo">
-          <Link to="/">
-          <img src={Deltadev} alt="Logo" className="logo-image" />
-          </Link>
-             {/* Replace text logo with image */}
+            <Link to="/">
+              <img src={Deltadev} alt="Logo" className="logo-image" />
+            </Link>
           </div>
           <div className="navbar-categories">
-            <button className="dropdown-btn">Categories</button>
-            {/* Dropdown options */}
-            <div className="dropdown-content">
-              <a href="#">Category 1</a>
-              <a href="#">Category 2</a>
-              <a href="#">Category 3</a>
-            </div>
+            <button className="dropdown-btn" onClick={toggleCategories}>Categories</button>
+            {/* Only show dropdown content if categories are open */}
+            {isCategoriesOpen && (
+              <div className="dropdown-content">
+                <Link to="/courses">Courses</Link>
+                <Link to="#">Academics</Link>
+                <Link to="/instructor">Instructor List</Link>
+                <Link to="#">Photography</Link>
+                <Link to="#">IT and Software</Link>
+                <Link to="#">Cyber Security</Link>
+              </div>
+            )}
           </div>
 
           <div className="search-bar">
@@ -45,10 +51,10 @@ function Navbar() {
         {/* Right side with Courses, Events, Login, Logout */}
         <div className={`navbar-right ${isMobileMenuOpen ? 'open' : ''}`}>
           <Link to="/courses">Courses</Link>
-          <a href="#">Instructor List</a>
-          <a href="#">Events</a>
-          <a href="#">Sign-in</a>
-          <a href="#">Sign-up</a>
+          <Link to="/instructor">Instructor List</Link>
+          <Link to="#">Events</Link>
+          <Link to="#">Sign-in</Link>
+          <Link to="#">Sign-up</Link>
         </div>
 
         {/* Toggle button for mobile view */}
