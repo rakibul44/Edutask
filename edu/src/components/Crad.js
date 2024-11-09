@@ -9,6 +9,7 @@ const CardSection = () => {
     { id: 4, title: "Mobile Apps", logo: "https://img.icons8.com/color/80/000000/android-os.png" },
     { id: 5, title: "Computer Science", logo: "https://img.icons8.com/color/80/000000/computer.png" },
     { id: 6, title: "Computer Science", logo: "https://img.icons8.com/color/80/000000/computer.png" },
+    
   ];
 
   return (

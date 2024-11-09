@@ -50,6 +50,33 @@ const courseData = [
     lessons: "10 Lessons",
     sections: "5 Sections",
   },
+  {
+    id: 6,
+    image: office,
+    subtitle: "Virtualization & Computing",
+    title: "Aliquam vel arcu eu lorem sollicitudin",
+    price: "$667.00",
+    lessons: "10 Lessons",
+    sections: "5 Sections",
+  },
+  {
+    id: 7,
+    image: office,
+    subtitle: "Virtualization & Computing",
+    title: "Aliquam vel arcu eu lorem sollicitudin",
+    price: "$667.00",
+    lessons: "10 Lessons",
+    sections: "5 Sections",
+  },
+  {
+    id: 8,
+    image: office,
+    subtitle: "Virtualization & Computing",
+    title: "Aliquam vel arcu eu lorem sollicitudin",
+    price: "$667.00",
+    lessons: "10 Lessons",
+    sections: "5 Sections",
+  },
 ];
 
 const CourseCard = ({ course }) => (
