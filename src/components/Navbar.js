@@ -4,6 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faBars } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
 import Deltadev from '../images/Deltadev.png'; // Adjust path to your logo image
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
+
 
 function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,7 +21,10 @@ function Navbar() {
         {/* Left side with Logo, Categories dropdown, and Search */}
         <div className="navbar-left">
           <div className="navbar-logo">
-            <img src={Deltadev} alt="Logo" className="logo-image" /> {/* Replace text logo with image */}
+          <Link to="/">
+          <img src={Deltadev} alt="Logo" className="logo-image" />
+          </Link>
+             {/* Replace text logo with image */}
           </div>
           <div className="navbar-categories">
             <button className="dropdown-btn">Categories</button>
@@ -38,7 +44,7 @@ function Navbar() {
 
         {/* Right side with Courses, Events, Login, Logout */}
         <div className={`navbar-right ${isMobileMenuOpen ? 'open' : ''}`}>
-          <a href="#">Courses</a>
+          <Link to="/courses">Courses</Link>
           <a href="#">Instructor List</a>
           <a href="#">Events</a>
           <a href="#">Sign-in</a>

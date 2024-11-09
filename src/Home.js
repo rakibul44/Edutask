@@ -6,7 +6,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Header from './components/Header';
 import Slider from './components/Slider';
 import Card from './components/Crad';
-import CourseCard from './components/CourseCard';
+import CourseCard from './components/coursecards';
 import Eventlist from './components/Eventlist';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';

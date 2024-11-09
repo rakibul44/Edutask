@@ -2,7 +2,10 @@ import React from 'react';
 import './CourseCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark, faStar, faEye } from '@fortawesome/free-solid-svg-icons';
-import office from '../images/office.jpg';
+import office from '../../images/office.jpg';
+import { useState, useEffect } from 'react';
+
+// FOR HTTP REQUEST
 
 const courseData = [
   {
@@ -114,8 +117,11 @@ const CourseCard = ({ course }) => (
   </div>
 );
 
-const CourseCardContainer = () => (
-  <div className="course-card-container">
+
+function CourseCardContainer() {
+
+  return (
+    <div className="course-card-container">
     <h2 className="section-title">Our Popular <span className="highlight">Courses</span></h2>
     <div className="cards-wrapper">
       {courseData.map((course) => (
@@ -123,6 +129,7 @@ const CourseCardContainer = () => (
       ))}
     </div>
   </div>
-);
+  )
+}
 
 export default CourseCardContainer;
