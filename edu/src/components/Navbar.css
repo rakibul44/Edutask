@@ -137,6 +137,9 @@
     align-items: center;
   }
   
+  .navbar-right a{
+    font-size: 12px;
+  }
   /* Mobile styles */
   .navbar-toggle {
     display: none;

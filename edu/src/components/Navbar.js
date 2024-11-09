@@ -39,9 +39,10 @@ function Navbar() {
         {/* Right side with Courses, Events, Login, Logout */}
         <div className={`navbar-right ${isMobileMenuOpen ? 'open' : ''}`}>
           <a href="#">Courses</a>
+          <a href="#">Instructor List</a>
           <a href="#">Events</a>
-          <a href="#">Login</a>
-          <a href="#">Logout</a>
+          <a href="#">Sign-in</a>
+          <a href="#">Sign-up</a>
         </div>
 
         {/* Toggle button for mobile view */}
