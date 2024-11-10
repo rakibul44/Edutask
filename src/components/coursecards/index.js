@@ -2,11 +2,10 @@ import React from 'react';
 import './CourseCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark, faStar, faEye } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 import office from '../../images/office.jpg';
-// import { useState, useEffect } from 'react';
 
 // FOR HTTP REQUEST
-
 const courseData = [
   {
     id: 1,
@@ -83,12 +82,13 @@ const courseData = [
 ];
 
 const CourseCard = ({ course }) => (
-  <div className="course-card">
+  <div className="course-card"> 
     {/* Image container with overlay */}
     <div className="image-container">
       <img src={course.image} alt={course.title} className="course-image" />
       <div className="image-overlay">
         <FontAwesomeIcon icon={faEye} className="eye-icon" />
+        <Link to="/courses">Courses</Link>
       </div>
     </div>
     

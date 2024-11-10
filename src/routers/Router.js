@@ -4,6 +4,7 @@ import Home from '../Home';
 import Courses from '../pages/Courses';
 import Instructor from '../pages/Instructor';
 import Events from "../pages/Events";
+import Preview from '../pages/Preview';
 
 const mainRoutes = [
     {
@@ -17,6 +18,9 @@ const mainRoutes = [
     },
     {
         path: '/events', element: <Events />
+    },
+    {
+        path: '/preview', element: <Preview/>
     }
 ]
 
@@ -37,6 +41,9 @@ const router =  createBrowserRouter([
     // {
     //     path: '/events',
     //     element: <Events />,
+    // }
+    // {
+    //     path: '/preview', element: <Preview/>
     // }
 
 ])

@@ -3,10 +3,8 @@ import './Instructor.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
-// import { Link } from 'react-router-dom';
 import p1 from '../images/p1.webp';
 import p2 from '../images/p2.jpg';
-
 
 // ProfileCard component to display individual profiles
 const ProfileCard = ({ profile }) => {
@@ -53,29 +51,28 @@ const ProfileList = () => {
     },
     {
       id: 3,
-      name: 'MD Akramul Hoque',
-      about: 'Frontend Web Development, App Development, Graphic Design, UI/UX',
+      name: 'Another Instructor',
+      about: 'Backend Development, Database Management, Cloud Services',
       image: p2,
     },
     {
       id: 4,
-      name: 'MD Akramul Hoque',
-      about: 'Frontend Web Development, App Development, Graphic Design, UI/UX',
+      name: 'Instructor Example',
+      about: 'Data Science, Machine Learning, AI Development',
       image: p2,
     },
     {
       id: 5,
-      name: 'MD Akramul Hoque',
-      about: 'Frontend Web Development, App Development, Graphic Design, UI/UX',
+      name: 'Instructor Sample',
+      about: 'Cybersecurity, Ethical Hacking, Network Security',
       image: p2,
     },
     {
       id: 6,
-      name: 'MD Akramul Hoque',
-      about: 'Frontend Web Development, App Development, Graphic Design, UI/UX',
+      name: 'Sample Instructor',
+      about: 'Mobile App Development, UI/UX, Graphic Design',
       image: p2,
     },
-    // Add more profiles as needed
   ];
 
   return (
