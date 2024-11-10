@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.banner-content {
+  background-color: white;
+  padding: 2rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+}
+
+.banner-content h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.banner-content p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.banner-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.primary-button,
+.secondary-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+
+
+
+
+.primary-button {
+    display: inline-block; /* To make sure it's styled as a block-level button */
+    text-align: center; /* Center text inside the button */
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #5081ef;
+    color: white;
+    text-decoration: none; /* Remove underline for links */
+    transition: background-color 0.3s ease;
+  }
+  
+  .primary-button:hover {
+    background-color: #5081ef
+  }
+
+.secondary-button {
+  background-color: #333;
+  color: white;
+}
+
+.secondary-button:hover {
+  background-color: #111;
+}
+
+.chat-icon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #5081ef;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.chat-icon i {
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner-content {
+    padding: 1.5rem;
+  }
+
+  .banner-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .banner-content p {
+    font-size: 0.9rem;
+  }
+
+  .primary-button,
+  .secondary-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}

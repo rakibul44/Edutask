@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Navbar from '../components/Navbar';
 import {Outlet}  from 'react-router-dom';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 class Main extends Component {
     render() {
@@ -12,6 +13,8 @@ class Main extends Component {
                 <div className=''>
                     <Outlet />
                 </div>
+
+                <Footer />
             </div>
         );
     }

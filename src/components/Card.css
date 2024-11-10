@@ -55,7 +55,7 @@
 }
 
 .card-logo img:hover {
-    border: 1px solid #000;
+    border: 1px solid #5081F9;
 }
 
 /* Title style */
@@ -68,20 +68,30 @@
     color: #5081F9;
 }
 
+/* Button Styles */
 .view-more-button {
-    background-color: transparent;
-    color: #5081F9;
-    border: 1px solid #5081F9;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: color 0.2s, background-color 0.2s;
-}
-
-.view-more-button:hover {
-    color: #f9f9f9;
-    background-color: #5081F9;
-}
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #5081f9;
+    background-color: transparent; 
+    border: 2px solid #5081F9;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .view-more-button:hover {
+    color: #ffffff;
+    background-color: #5081F9; /* Slightly lighter green on hover */
+    transform: scale(1.05); /* Subtle scaling effect on hover */
+  }
+  
+  .view-more-button:active {
+    background-color: #25603a; /* Darker shade on click */
+    transform: scale(0.98); /* Slight "pressed" effect on click */
+  }
 
 /* Responsive design for mobile, tablet, and desktop */
 /* Tablet version (max-width: 1024px) */
@@ -97,10 +107,18 @@
     .card-title {
         font-size: 16px;
     }
+    .view-more-button {
+        font-size: 14px; /* Slightly smaller font for mobile */
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+      }
 }
 
 /* Mobile version (max-width: 768px) */
 @media (max-width: 768px) {
+    .view-more-button {
+        font-size: 14px; /* Slightly smaller font for mobile */
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+      }
     .card {
         width: 100%;
     }
@@ -120,6 +138,10 @@
 
 /* Extra-small screens (max-width: 480px) */
 @media (max-width: 480px) {
+    .view-more-button {
+        font-size: 14px; /* Slightly smaller font for mobile */
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+      }
     .card-section-container {
         padding: 15px;
     }

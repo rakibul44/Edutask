@@ -1,5 +1,6 @@
 import React from 'react';
 import './Card.css';
+import { Link } from 'react-router-dom';
 
 const CardSection = () => {
   const cards = [
@@ -28,7 +29,7 @@ const CardSection = () => {
       </div>
 
       {/* Button */}
-      <button className="view-more-button">Browse Online Courses</button>
+      <Link to="/courses" className="view-more-button">Browse Online Courses</Link>
     </div>
     </div>
   );

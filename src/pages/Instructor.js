@@ -1,34 +1,90 @@
-// Instructor.js
 import React from 'react';
 import './Instructor.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+// import { Link } from 'react-router-dom';
+import p1 from '../images/p1.webp';
+import p2 from '../images/p2.jpg';
 
-const instructors = [
-  { id: 1, name: "Henry", title: "Engineer", email: "henry@email.com", imgSrc: "path-to-image" },
-  { id: 2, name: "Prem Sagar Verma", title: "Lecturer", imgSrc: "path-to-image" },
-  { id: 3, name: "Lorence", title: "Lecturer", imgSrc: "path-to-image" },
-  { id: 4, name: "Roland", title: "Teacher", imgSrc: "path-to-image" },
-  { id: 5, name: "Harry", title: "Business analyzer", imgSrc: "path-to-image" },
-  { id: 6, name: "Isabella", title: "Lecturer", imgSrc: "path-to-image" },
-  { id: 7, name: "Jonny", title: "Teacher", imgSrc: "path-to-image" },
-];
 
-const Instructor = () => {
+// ProfileCard component to display individual profiles
+const ProfileCard = ({ profile }) => {
   return (
-    <div className="instructor-section">
-      <div className="instructor-container">
-        {instructors.map((instructor) => (
-          <div className="instructor-card" key={instructor.id}>
-            <div className="card-avatar">
-              <img src={instructor.imgSrc} alt={instructor.name} />
-            </div>
-            <h3>{instructor.name}</h3>
-            <p>{instructor.title}</p>
-            {instructor.email && <p className="email">{instructor.email}</p>}
+    <div className="Icard">
+      <button className="mail">
+        <FontAwesomeIcon icon={faEnvelope} />
+      </button>
+      <div className="profile-pic">
+        <img src={profile.image} alt="Profile" />
+      </div>
+      <div className="bottom">
+        <div className="Icontent">
+          <span className="name">{profile.name}</span>
+          <span className="about-me">{profile.about}</span>
+        </div>
+        <div className="bottom-bottom">
+          <div className="social-links-container">
+            <FontAwesomeIcon icon={faFacebook} className="social-icon" />
+            <FontAwesomeIcon icon={faInstagram} className="social-icon" />
+            <FontAwesomeIcon icon={faTwitter} className="social-icon" />
           </div>
-        ))}
+          <button className="button">Contact Me</button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Instructor;
+// Parent component to display multiple ProfileCards
+const ProfileList = () => { 
+  const profiles = [
+    {
+      id: 1,
+      name: 'Md. Mehrab Hossen',
+      about: 'Full Stack Web Development, App Development, Project Research, Digital Marketing, Graphic Design',
+      image: p1,
+    },
+    {
+      id: 2,
+      name: 'MD Akramul Hoque',
+      about: 'Frontend Web Development, App Development, Graphic Design, UI/UX',
+      image: p2,
+    },
+    {
+      id: 3,
+      name: 'MD Akramul Hoque',
+      about: 'Frontend Web Development, App Development, Graphic Design, UI/UX',
+      image: p2,
+    },
+    {
+      id: 4,
+      name: 'MD Akramul Hoque',
+      about: 'Frontend Web Development, App Development, Graphic Design, UI/UX',
+      image: p2,
+    },
+    {
+      id: 5,
+      name: 'MD Akramul Hoque',
+      about: 'Frontend Web Development, App Development, Graphic Design, UI/UX',
+      image: p2,
+    },
+    {
+      id: 6,
+      name: 'MD Akramul Hoque',
+      about: 'Frontend Web Development, App Development, Graphic Design, UI/UX',
+      image: p2,
+    },
+    // Add more profiles as needed
+  ];
+
+  return (
+    <div className="profile-list">
+      {profiles.map((profile) => (
+        <ProfileCard key={profile.id} profile={profile} />
+      ))}
+    </div>
+  );
+};
+
+export default ProfileList;

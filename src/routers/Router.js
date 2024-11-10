@@ -3,6 +3,7 @@ import Main from "../layouts/Main";
 import Home from '../Home';
 import Courses from '../pages/Courses';
 import Instructor from '../pages/Instructor';
+import Events from "../pages/Events";
 
 const mainRoutes = [
     {
@@ -13,6 +14,9 @@ const mainRoutes = [
     },
     {
         path: '/instructor', element: <Instructor />
+    },
+    {
+        path: '/events', element: <Events />
     }
 ]
 
@@ -22,14 +26,18 @@ const router =  createBrowserRouter([
         element: <Main />,
         children: mainRoutes ,
     },
-    {
-        path: '/courses',
-        element: <Courses />,
-    },
-    {
-        path: '/instructor',
-        element: <Instructor />,
-    }
+    // {
+    //     path: '/courses',
+    //     element: <Courses />,
+    // },
+    // {
+    //     path: '/instructor',
+    //     element: <Instructor />,
+    // }
+    // {
+    //     path: '/events',
+    //     element: <Events />,
+    // }
 
 ])
 

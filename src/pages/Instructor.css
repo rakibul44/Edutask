@@ -1,64 +1,195 @@
-/* Instructor.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.instructor-section {
-    padding: 30px;
-    background-color: #f5f5f5;
-  }
-  
-  .instructor-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .instructor-card {
-    width: 240px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #ffffff;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .instructor-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .card-avatar img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-  }
-  
-  .instructor-card h3 {
-    margin: 10px 0 5px;
-    font-size: 18px;
-    color: #333;
-  }
-  
-  .instructor-card p {
-    font-size: 14px;
-    color: #777;
-  }
-  
-  .instructor-card .email {
-    font-size: 13px;
-    color: #5081F9;
-  }
-  
-  @media (max-width: 768px) {
-    .instructor-card {
-      width: 45%;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .instructor-card {
-      width: 100%;
-    }
-  }
-  
+
+.profile-list {
+  padding: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center ;
+}
+
+.Icard {
+  width: 280px;
+  height: 280px;
+  background: white;
+  border-radius: 32px;
+  padding: 3px;
+  position: relative;
+  box-shadow: #604b4a30 0px 70px 30px -50px;
+  transition: all 0.5s ease-in-out;
+}
+
+.Icard .mail {
+  position: absolute;
+  right: 2rem;
+  top: 1.4rem;
+  background: transparent;
+  border: none;
+}
+
+.Icard .mail i {
+  color: #5081fe;
+  font-size: 25px;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+
+.Icard .mail i:hover {
+  color: #5081fe;
+}
+
+.Icard .profile-pic {
+  position: absolute;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  top: 3px;
+  left: 3px;
+  border-radius: 29px;
+  z-index: 1;
+  border: 0px solid #5081fe;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out 0.2s, z-index 0.5s ease-in-out 0.2s;
+}
+
+.Icard .profile-pic img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -o-object-position: 0px 0px;
+  object-position: 0px 0px;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.Icard .profile-pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 0px 0px;
+  object-position: 0px 0px;
+  transform-origin: 45% 20%;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.Icard .bottom {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  background: #5081fe;
+  top: 80%;
+  border-radius: 29px;
+  z-index: 2;
+  box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px inset;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.Icard .bottom .Icontent {
+  position: absolute;
+  bottom: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 160px;
+}
+
+.Icard .bottom .Icontent .name {
+  display: block;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.Icard .bottom .Icontent .about-me {
+  display: block;
+  font-size: 0.9rem;
+  color: white;
+  margin-top: 1rem;
+}
+
+.Icard .bottom .bottom-bottom {
+  position: absolute;
+  bottom: 1rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Icard .bottom .bottom-bottom .social-links-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.Icard .bottom .bottom-bottom .social-links-container i {
+  height: 20px;
+  color: white;
+  filter: drop-shadow(0 5px 5px rgba(165, 132, 130, 0.1333333333));
+  cursor: pointer;
+}
+
+.Icard .bottom .bottom-bottom .social-links-container i:hover {
+  color: #5081fe;
+  transform: scale(1.2);
+}
+
+.Icard .bottom .bottom-bottom .button {
+  background: white;
+  color: #5081fe;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.6rem;
+  padding: 0.4rem 0.6rem;
+  box-shadow: rgba(165, 132, 130, 0.1333333333) 0px 5px 5px 0px;
+  cursor: pointer;
+}
+
+.Icard .bottom .bottom-bottom .button:hover {
+  background: #ffff;
+  color: #5081fe;
+}
+
+.Icard:hover {
+  border-top-left-radius: 55px;
+}
+
+.Icard:hover .bottom {
+  top: 20%;
+  border-radius: 80px 29px 29px 29px;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+
+.Icard:hover .profile-pic {
+  width: 100px;
+  height: 100px;
+  aspect-ratio: 1;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  z-index: 3;
+  border: 7px solid #5081fe;
+  box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px;
+  transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
+}
+
+.Icard:hover .profile-pic:hover {
+  transform: scale(1.3);
+  border-radius: 0px;
+}
+
+.Icard:hover .profile-pic img {
+  position: relative;
+  top: -60px;
+  transform: scale(2.5);
+  -o-object-position: 0px 25px;
+  object-position: 0px 25px;
+  transition: all 0.5s ease-in-out 0.5s;
+}
+
+.Icard:hover .profile-pic img {
+  transform: scale(2.5);
+  transition: all 0.5s ease-in-out 0.5s;
+}

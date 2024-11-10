@@ -9,7 +9,8 @@ import Card from './components/Crad';
 import CourseCard from './components/coursecards';
 import Eventlist from './components/Eventlist';
 import Newsletter from './components/Newsletter';
-import Footer from './components/Footer';
+import Banner from './components/Banner';
+// import Footer from './components/Footer';
 
 function Home() {
   return (
@@ -32,10 +33,12 @@ function Home() {
       <Eventlist />
       {/* News and event components go here */}
 
+      <Banner />
+
       <Newsletter />
       {/* News update components go here */}
 
-      <Footer />
+      {/* <Footer /> */}
       {/* footer components go here */}
 
     </div>

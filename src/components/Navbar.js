@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faBars } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
 import Deltadev from '../images/Deltadev.png';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+// import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -33,11 +34,11 @@ function Navbar() {
             {isCategoriesOpen && (
               <div className="dropdown-content">
                 <Link to="/courses">Courses</Link>
-                <Link to="#">Academics</Link>
+                <Link to="/courses">Academics</Link>
                 <Link to="/instructor">Instructor List</Link>
-                <Link to="#">Photography</Link>
-                <Link to="#">IT and Software</Link>
-                <Link to="#">Cyber Security</Link>
+                <Link to="/courses">Photography</Link>
+                <Link to="/courses">IT and Software</Link>
+                <Link to="/courses">Cyber Security</Link>
               </div>
             )}
           </div>
@@ -52,7 +53,7 @@ function Navbar() {
         <div className={`navbar-right ${isMobileMenuOpen ? 'open' : ''}`}>
           <Link to="/courses">Courses</Link>
           <Link to="/instructor">Instructor List</Link>
-          <Link to="#">Events</Link>
+          <Link to="/events">Events</Link>
           <Link to="#">Sign-in</Link>
           <Link to="#">Sign-up</Link>
         </div>

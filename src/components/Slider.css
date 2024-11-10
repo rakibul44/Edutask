@@ -2,10 +2,10 @@
 .carousel-container {
     overflow: hidden;
     width: 100%;
-    background-color: #90bafc;
+    background-color: #f8fafd;
     padding:18px 0;
-    border-top: 1px solid #d1d1d1; /* Light border around the carousel */
-    border-bottom: 1px solid #d1d1d1;
+    /* border-top: 1px solid #d1d1d1; 
+    border-bottom: 1px solid #d1d1d1; */
      /* Rounded corners */
     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
     margin-top: 55px; /* Center the carousel and add top/bottom spacing */

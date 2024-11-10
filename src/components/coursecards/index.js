@@ -3,7 +3,7 @@ import './CourseCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark, faStar, faEye } from '@fortawesome/free-solid-svg-icons';
 import office from '../../images/office.jpg';
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
 // FOR HTTP REQUEST
 
