@@ -1,0 +1,35 @@
+.app {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-content {
+    display: flex;
+  }
+  
+  .dashboard-content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .courses {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    .main-content {
+      flex-direction: column;
+    }
+    
+    .sidebar {
+      width: 100%;
+    }
+    
+    .courses {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
