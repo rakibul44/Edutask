@@ -7,27 +7,30 @@
   text-align: center;
   padding: 2rem;
   position: relative;
+  background-image: url(../images/books.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.8;
 }
 
 .banner-content {
-  background-color: white;
-  padding: 2rem 3rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 1200px;
+   padding: 50px 10px;
 }
 
 .banner-content h2 {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #000;
+  color: #5081ef;
   margin-bottom: 1rem;
   font-family: 'Poppins', sans-serif;
+  z-index: 10;
 }
 
 .banner-content p {
   font-size: 1rem;
-  color: #333;
+  color: #ffff;
   margin-bottom: 1.5rem;
   font-family: 'Poppins', sans-serif;
 }

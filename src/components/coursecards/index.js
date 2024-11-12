@@ -2,7 +2,7 @@ import React from 'react';
 import './CourseCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark, faStar, faEye } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import office from '../../images/office.jpg';
 
 // FOR HTTP REQUEST
@@ -88,7 +88,7 @@ const CourseCard = ({ course }) => (
       <img src={course.image} alt={course.title} className="course-image" />
       <div className="image-overlay">
         <FontAwesomeIcon icon={faEye} className="eye-icon" />
-        <Link to="/courses">Courses</Link>
+
       </div>
     </div>
     

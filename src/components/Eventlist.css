@@ -34,6 +34,9 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px;
     gap: 10px;
+    text-align: center;
+    color: #5181ee;
+    text-decoration: none;
     transition: transform 0.3s ease;
   }
   
@@ -148,7 +151,11 @@
     z-index: 1;
   }
 
-  .bookmark-icon{
+  .featured-title-link{
+    text-decoration: none;
+  }
+
+  .Ebookmark-icon{
     position: absolute;
     top: 10px; /* Adjust to your preference */
     right: 135px; /* Adjust to your preference */

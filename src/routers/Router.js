@@ -20,7 +20,7 @@ const mainRoutes = [
         path: '/events', element: <Events />
     },
     {
-        path: '/preview', element: <Preview/>
+        path: '/preview', element: <Preview />
     }
 ]
 
@@ -43,7 +43,7 @@ const router =  createBrowserRouter([
     //     element: <Events />,
     // }
     // {
-    //     path: '/preview', element: <Preview/>
+    //     path: '/preview', element: <Preview />
     // }
 
 ])

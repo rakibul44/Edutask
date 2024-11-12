@@ -1,9 +1,10 @@
 // EventList.js
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock, faCalendar, faBookmark} from '@fortawesome/free-solid-svg-icons';
+import { faClock, faCalendar, faBookmark } from '@fortawesome/free-solid-svg-icons';
 import './Eventlist.css';
 import news from '../images/news.jpg';
+import { Link } from 'react-router-dom';
 
 const events = [
   { date: { day: '14', month: 'Sep' }, time: '11:00:09 AM', title: 'aa' },
@@ -26,7 +27,8 @@ const EventList = () => {
         {/* Event List Section */}
         <div className="event-list">
           {events.map((event, index) => (
-            <div key={index} className="event-item">
+            // page linkup
+            <Link key={index} to="/events" className="event-item">
               <div className="event-date">
                 <FontAwesomeIcon icon={faCalendar} />
                 <div className="date-number">{event.date.day}</div>
@@ -38,29 +40,32 @@ const EventList = () => {
                   <FontAwesomeIcon icon={faClock} />
                   <span>{event.time}</span>
                 </div>
-                  <p>{event.title}</p>
+                <p>{event.title}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
         {/* Featured Event Section */}
         <div className="featured-event">
           {featured.map((item, index) => (
-          <div className='Featured'>
-            <div key={index} className="featured-item">
-              <img src={item.image} alt="Event" className="featured-image" />
-              <div className="news-overlay">
-                <FontAwesomeIcon icon={faBookmark} className="bookmark" />
-              </div> 
-            </div>
-            <div className="featured-content">
-                <FontAwesomeIcon icon={faBookmark} className="bookmark-icon" />
+            <div key={index} className="Featured">
+              <div className="featured-item">
+                <img src={item.image} alt="Event" className="featured-image" />
+                <div className="news-overlay">
+                  <FontAwesomeIcon icon={faBookmark} className="bookmark" />
+                </div> 
+              </div>
+              <div className="featured-content">
+                <FontAwesomeIcon icon={faBookmark} className="Ebookmark-icon" />
                 <span className="event-date-vertical">{item.date.full}</span>
                 <span className="event-type">{item.type}</span>
-                <h4>{item.title}</h4>
+                {/* Wrap the title with Link to make only the title clickable */}
+                  <Link to={`/preview`} className="featured-title-link">
+                    <h4>{item.title}</h4>
+                  </Link>
+              </div>
             </div>
-          </div>
           ))}
         </div>
       </div>

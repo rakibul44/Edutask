@@ -1,90 +1,67 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .course-card {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .course-details {
-    flex: 1;
-    min-width: 300px;
-    padding: 20px;
-  }
-  
-  .subscription {
-    flex: 1;
-    min-width: 300px;
-    padding: 20px;
+/* Preview.css */
+
+/* Banner Section */
+.banner {
     background-color: #f8f9fa;
-    border: 1px solid #ddd;
+    padding: 20px;
     border-radius: 8px;
   }
   
-  h3 {
-    font-size: 0.9em;
-    color: #555;
-  }
-  
-  h1 {
-    font-size: 1.8em;
-    color: #222;
-  }
-  
-  .bestseller-badge {
-    background-color: gold;
-    color: black;
-    padding: 5px;
-    border-radius: 4px;
+  .banner h2 {
+    font-size: 1.8rem;
     font-weight: bold;
-    margin: 10px 0;
+    margin-bottom: 12px;
   }
   
-  .rating {
-    font-size: 1em;
-    color: #555;
-    margin: 10px 0;
+  .banner p {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
   }
   
-  .free-trial-button, .add-to-cart-button {
-    background-color: purple;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-    margin: 10px 0;
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
   }
   
-  .price-options {
-    text-align: center;
-    font-size: 0.9em;
-    color: #666;
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
   
-  .one-time-price {
-    font-weight: bold;
-    font-size: 1.5em;
-    color: #333;
+  /* Accordion Section */
+  .preview-container {
+    padding: 20px;
   }
   
-  @media (max-width: 768px) {
-    .course-card {
-      flex-direction: column;
-    }
+  .accordion-section {
+    margin-top: 20px;
   }
   
-  @media (min-width: 769px) {
-    .course-card {
-      display: flex;
-      justify-content: space-between;
-    }
+  .lecture-item {
+    padding: 8px 0;
+  }
+  
+  .lecture-title {
+    font-weight: 500;
+  }
+  
+  .preview-badge {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 6px;
+    margin-left: 8px;
+    border-radius: 3px;
+  }
+  
+  .lecture-duration {
+    font-size: 14px;
+    color: #6c757d;
   }
   
