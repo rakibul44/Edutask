@@ -12,18 +12,18 @@
   margin-bottom: 20px;
 }
 
-.header-left {
+.pheader-left {
   flex: 1;
 }
 
-.header-right {
+.pheader-right {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.header-right iframe {
+.pheader-right iframe {
   width: 90%;
   max-width: 460px; /* Adjust as needed */
   aspect-ratio: 16 / 9;
@@ -32,14 +32,14 @@
   border: none;
 }
 
-.header-title {
+.pheader-title {
   text-align: left;
   font-weight: bold;
   font-size: 2rem;
   margin-bottom: 10px;
 }
 
-.header-text {
+.pheader-text {
   font-size: 1.3rem;
   padding-bottom: 10px;
 }
@@ -60,7 +60,7 @@
   background-color: #0056b3;
 }
 
-.header-right iframe {
+.pheader-right iframe {
   max-width: 100%;
   height: auto;
   border-radius: 8px;

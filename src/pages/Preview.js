@@ -54,13 +54,13 @@ const PreviewPage = () => {
   return (
     <div className="preview-page">
       <header className="preview-header">
-        <div className="header-left">
-          <h1 className="header-title">The Web Developer Bootcamp 2024</h1>
-          <p className="header-text">10 Hours of React just added. Become a Developer With ONE course - HTML, CSS, JavaScript, React, Node, MongoDB and More!</p>
+        <div className="pheader-left">
+          <h1 className="pheader-title">The Web Developer Bootcamp 2024</h1>
+          <p className="pheader-text">10 Hours of React just added. Become a Developer With ONE course - HTML, CSS, JavaScript, React, Node, MongoDB and More!</p>
           <Link to="/courses" className="header-button">Enroll Now</Link>
         </div>
         
-        <div className="header-right">
+        <div className="pheader-right">
           <iframe
             src="https://www.youtube.com/embed/dQw4w9WgXcQ" // Replace with your YouTube video link
             title="YouTube video player"
