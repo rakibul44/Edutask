@@ -6,6 +6,7 @@ import Instructor from '../pages/Instructor';
 import Events from "../pages/Events";
 import Preview from '../pages/Preview';
 
+
 const mainRoutes = [
     {
         path:'/', element:<Home />,
@@ -22,7 +23,16 @@ const mainRoutes = [
     {
         path: '/preview', element: <Preview />
     }
+    
 ]
+
+// const dashbooardRoutes =[
+
+//     {
+//         path:'', element:<Dashboard />,
+//     }
+
+// ]
 
 const router =  createBrowserRouter([
     {

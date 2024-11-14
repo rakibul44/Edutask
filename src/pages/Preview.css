@@ -1,67 +1,159 @@
-/* Preview.css */
+/* Base styles */
+.preview-page {
+  padding: 50px 100px;
+}
 
-/* Banner Section */
-.banner {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
+.preview-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 40px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-left {
+  flex: 1;
+}
+
+.header-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-right iframe {
+  width: 90%;
+  max-width: 460px; /* Adjust as needed */
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  box-shadow: 1px 5px 22px 2px rgba(69,69,69,1);
+  border: none;
+}
+
+.header-title {
+  text-align: left;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.header-text {
+  font-size: 1.3rem;
+  padding-bottom: 10px;
+}
+
+.header-button {
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.header-button:hover {
+  background-color: #0056b3;
+}
+
+.header-right iframe {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Accordion styles */
+.preview-accordion .accordion-header {
+  font-weight: 600;
+}
+
+.lecture-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.lecture-title {
+  font-weight: 500;
+}
+
+.lecture-duration {
+  color: #888;
+}
+
+.badge.preview-badge {
+  background-color: #28a745;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 3px 8px;
+  border-radius: 12px;
+  margin-left: 8px;
+}
+
+/* Responsive styles */
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .header-left,
+  .header-right {
+    flex: 1 1 100%;
+    text-align: center;
   }
-  
-  .banner h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 12px;
+
+  .header-title {
+    font-size: 1.6rem;
   }
-  
-  .banner p {
-    font-size: 1.1rem;
-    margin-bottom: 16px;
+
+  .header-text {
+    font-size: 0.95rem;
   }
-  
-  .video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
+
+  .header-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
-  
-  .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  /* Accordion Section */
-  .preview-container {
-    padding: 20px;
-  }
-  
-  .accordion-section {
+
+  .preview-accordion {
     margin-top: 20px;
   }
-  
+}
+
+/* Small screens (mobile) */
+@media (max-width: 576px) {
+  .preview-page {
+    padding: 10px;
+  }
+
+  .header-title {
+    font-size: 1.4rem;
+  }
+
+  .header-text {
+    font-size: 0.9rem;
+  }
+
+  .header-button {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+
   .lecture-item {
-    padding: 8px 0;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .lecture-title {
-    font-weight: 500;
-  }
-  
-  .preview-badge {
-    background-color: #007bff;
-    color: #fff;
-    font-size: 12px;
-    padding: 2px 6px;
-    margin-left: 8px;
-    border-radius: 3px;
-  }
-  
+
   .lecture-duration {
-    font-size: 14px;
-    color: #6c757d;
+    font-size: 0.9rem;
+    margin-top: 4px;
   }
-  
+
+  .badge.preview-badge {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+  }
+}
