@@ -1,0 +1,19 @@
+.sidebar {
+    background-color: #f5d19b;
+    padding: 20px;
+    border-radius: 10px;
+}
+.course-card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+.progress-bar {
+    background-color: #f5a623;
+}
+.profile-info {
+    text-align: center;
+}
+.btn-view {
+    border: 1px solid #000;
+    border-radius: 5px;
+}

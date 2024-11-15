@@ -56,6 +56,7 @@ function Navbar() {
           <Link to="/events">Events</Link>
           <Link to="#">Sign-in</Link>
           <Link to="#">Sign-up</Link>
+          <Link to="/student/dashboard">Profile</Link>
         </div>
 
         {/* Toggle button for mobile view */}

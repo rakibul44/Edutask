@@ -5,6 +5,7 @@ import Courses from '../pages/Courses';
 import Instructor from '../pages/Instructor';
 import Events from "../pages/Events";
 import Preview from '../pages/Preview';
+import StudentDashboard from '../pages/StudentDashboard';
 
 
 const mainRoutes = [
@@ -22,6 +23,9 @@ const mainRoutes = [
     },
     {
         path: '/preview', element: <Preview />
+    },
+    { 
+        path: '/student/dashboard', element: <StudentDashboard /> 
     }
     
 ]
