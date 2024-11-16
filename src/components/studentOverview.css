@@ -1,8 +1,39 @@
 .sidebar {
-    background-color: #f5d19b;
+    background-color: #5081eb;
     padding: 20px;
     border-radius: 10px;
+    cursor: pointer;
+    height: 85vh;
 }
+
+.sidebar-menu {
+    width: 250px; /* Sidebar width */
+    padding: 15px; /* Inner padding */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Space between items */
+}
+
+.sidebar-menu a {
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Text color */
+    font-size: 16px; /* Font size */
+    padding: 10px 15px; /* Padding inside links */
+    border-radius: 5px; /* Rounded corners */
+    display: flex;
+    align-items: center; /* Align icon and text */
+    gap: 10px; /* Space between icon and text */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.sidebar-menu a:hover {
+    background-color: #254893; /* Change background color on hover */
+}
+
+.sidebar-menu i {
+    font-size: 18px; /* Icon size */
+}
+
 .course-card {
     border-radius: 10px;
     overflow: hidden;
@@ -12,6 +43,10 @@
 }
 .profile-info {
     text-align: center;
+}
+
+.profile{
+    width: 100px;
 }
 .btn-view {
     border: 1px solid #000;
